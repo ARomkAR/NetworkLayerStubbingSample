@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "GoogleService.h"
+#import "GITHubService.h"
 
 @interface ViewController ()
 
@@ -16,7 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    GoogleService *google = [[GoogleService alloc] init];
+    google.url = [NSURL URLWithString:@"https://google.com/"];
+    [google executeWithCompletionHandler:^(NSData * _Nullable data, NSError * _Nullable error) {
+        NSLog(@"%@", data);
+        NSLog(@"%@", error);
+    }];
+
+
+    GITHubService *gitHub = [[GITHubService alloc] init];
+    gitHub.url = [NSURL URLWithString:@"https://github.com/"];
+    [gitHub executeWithCompletionHandler:^(NSData * _Nullable data, NSError * _Nullable error) {
+        NSLog(@"%@", data);
+        NSLog(@"%@", error);
+    }];
 }
 
 

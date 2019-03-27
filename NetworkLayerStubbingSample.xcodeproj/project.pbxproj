@@ -14,6 +14,11 @@
 		E57B7ED6224B449E002AC435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57B7ED4224B449E002AC435 /* LaunchScreen.storyboard */; };
 		E57B7ED9224B449E002AC435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B7ED8224B449E002AC435 /* main.m */; };
 		E57B7EE3224B449E002AC435 /* NetworkLayerStubbingSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B7EE2224B449E002AC435 /* NetworkLayerStubbingSampleTests.m */; };
+		E57B7EF0224B44D8002AC435 /* AbstractService.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B7EEF224B44D8002AC435 /* AbstractService.m */; };
+		E57B7EF3224B4A82002AC435 /* GoogleService.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B7EF2224B4A82002AC435 /* GoogleService.m */; };
+		E57B7EF6224B4A97002AC435 /* GITHubService.m in Sources */ = {isa = PBXBuildFile; fileRef = E57B7EF5224B4A97002AC435 /* GITHubService.m */; };
+		E57B7EF9224B4E59002AC435 /* GoogleService.json in Resources */ = {isa = PBXBuildFile; fileRef = E57B7EF8224B4E59002AC435 /* GoogleService.json */; };
+		E57B7EFB224B4E9A002AC435 /* GITHubService.json in Resources */ = {isa = PBXBuildFile; fileRef = E57B7EFA224B4E9A002AC435 /* GITHubService.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,14 @@
 		E57B7EDE224B449E002AC435 /* NetworkLayerStubbingSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkLayerStubbingSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57B7EE2224B449E002AC435 /* NetworkLayerStubbingSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkLayerStubbingSampleTests.m; sourceTree = "<group>"; };
 		E57B7EE4224B449E002AC435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E57B7EEE224B44D8002AC435 /* AbstractService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractService.h; sourceTree = "<group>"; };
+		E57B7EEF224B44D8002AC435 /* AbstractService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractService.m; sourceTree = "<group>"; };
+		E57B7EF1224B4A82002AC435 /* GoogleService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleService.h; sourceTree = "<group>"; };
+		E57B7EF2224B4A82002AC435 /* GoogleService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleService.m; sourceTree = "<group>"; };
+		E57B7EF4224B4A97002AC435 /* GITHubService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GITHubService.h; sourceTree = "<group>"; };
+		E57B7EF5224B4A97002AC435 /* GITHubService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GITHubService.m; sourceTree = "<group>"; };
+		E57B7EF8224B4E59002AC435 /* GoogleService.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleService.json; sourceTree = "<group>"; };
+		E57B7EFA224B4E9A002AC435 /* GITHubService.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GITHubService.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +94,7 @@
 		E57B7EC8224B449A002AC435 /* NetworkLayerStubbingSample */ = {
 			isa = PBXGroup;
 			children = (
+				E57B7EED224B44A9002AC435 /* NetworkLayer */,
 				E57B7EC9224B449A002AC435 /* AppDelegate.h */,
 				E57B7ECA224B449A002AC435 /* AppDelegate.m */,
 				E57B7ECC224B449B002AC435 /* ViewController.h */,
@@ -101,6 +115,29 @@
 				E57B7EE4224B449E002AC435 /* Info.plist */,
 			);
 			path = NetworkLayerStubbingSampleTests;
+			sourceTree = "<group>";
+		};
+		E57B7EED224B44A9002AC435 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E57B7EF7224B4E40002AC435 /* Stubs */,
+				E57B7EEE224B44D8002AC435 /* AbstractService.h */,
+				E57B7EEF224B44D8002AC435 /* AbstractService.m */,
+				E57B7EF1224B4A82002AC435 /* GoogleService.h */,
+				E57B7EF2224B4A82002AC435 /* GoogleService.m */,
+				E57B7EF4224B4A97002AC435 /* GITHubService.h */,
+				E57B7EF5224B4A97002AC435 /* GITHubService.m */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		E57B7EF7224B4E40002AC435 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				E57B7EF8224B4E59002AC435 /* GoogleService.json */,
+				E57B7EFA224B4E9A002AC435 /* GITHubService.json */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +220,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57B7EFB224B4E9A002AC435 /* GITHubService.json in Resources */,
 				E57B7ED6224B449E002AC435 /* LaunchScreen.storyboard in Resources */,
 				E57B7ED3224B449E002AC435 /* Assets.xcassets in Resources */,
 				E57B7ED1224B449B002AC435 /* Main.storyboard in Resources */,
+				E57B7EF9224B4E59002AC435 /* GoogleService.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57B7EF6224B4A97002AC435 /* GITHubService.m in Sources */,
+				E57B7EF3224B4A82002AC435 /* GoogleService.m in Sources */,
 				E57B7ECE224B449B002AC435 /* ViewController.m in Sources */,
+				E57B7EF0224B44D8002AC435 /* AbstractService.m in Sources */,
 				E57B7ED9224B449E002AC435 /* main.m in Sources */,
 				E57B7ECB224B449A002AC435 /* AppDelegate.m in Sources */,
 			);
